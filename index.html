@@ -16,6 +16,7 @@
                 <!-- HEADER TEXT -->
                 <h1>Introduction</h1>
             </header>
+            <p>Godot is a general-purpose 2D and 3D game engine designed to support all sorts of projects. You can use it to create games or applications you can then release on desktop or mobile, as well as on the web. You can also create console games with it, although you either need strong programming skills or a developer to port the game for you.</p>
         </section>
         
         <section class="main-section" id="Prerequisites">
@@ -23,6 +24,9 @@
                 <!-- HEADER TEXT -->
                 <h1>Prerequisites</h1>
             </header>
+            <p>Godot is a feature-packed game engine. With its thousands of features, there is a lot to learn. To make the most of it, you need good programming foundations. While we try to make the engine accessible, you will benefit a lot from knowing how to think like a programmer first.
+
+                Godot relies on the object-oriented programming paradigm. Being comfortable with concepts such as classes and objects will help you code efficiently in it.</p>
         </section>
 
         <section class="main-section" id="GDScript_and_Python">
@@ -30,6 +34,13 @@
                 <!-- HEADER TEXT -->
                 <h1>GDScript and Python</h1>
             </header>
+            <p>Superficially, Python and GDScript appear similar. GDScript's syntax is based on Python's after all. For example, they have the same <code>for loop</code> structure:<br>
+
+            <code>
+                for x in someArray:<br>
+                &nbsp;&nbsp;print(x)
+            </code><br>
+            The main difference between the two is that while Python is a general purpose language which can be used for just about any type of project, GDScript is a "domain specific" language for use in a particular development environment (Godot). This means the language is very tightly integrated into Godot and a lot of what you use it for only applies to Godot. You can't really use it without also understanding how the rest of Godot works.</p>
         </section>
 
         <section class="main-section" id="Numbers">
@@ -37,6 +48,42 @@
                 <!-- HEADER TEXT -->
                 <h1>Numbers</h1>
             </header>
+            <p>Numbers are an important type of data in any computer program. GDScript supports integers and floating point values. And both types may be positive or negative.
+
+            We might assign numbers to variables. Then the value may be passed around and changed. If it's important that the value should not be changed then it should be assigned to a constant.
+                
+            Here are some examples of number assignments. Comments start with a # character.<br><br>
+            <code>
+                # Integers<br>
+                var a = 1<br>
+                var b = -23<br>
+                var c = 0<br>
+                var d = 0xA1Fe316 # hexadecimal<br>
+                <br>
+                # Floats<br>
+                var x = 1.0<br>
+                var y = -43.01<br>
+                var z = 1.3e6<br>
+                <br>
+                # Constant<br>
+                const THE_ANSWER = 42<br>
+            </code><br>
+            Pre-defined constants include: PI, TAU, INF (infinity)
+
+            For an exercise, write code to print numbers to the Output window of the Editor.
+                
+            Ideas to play around with:
+
+            <ul>
+                <li>What happens if you try to change the value of a constant?</li>
+                <li>Try entering a floating point value with an exponent like 3e6 (3 million)</li>
+                <li>What happens if you enter crazy large numbers?</li>
+                <li>Does it matter what case you use for hex digits?</li>
+                <li>Use the built-in constants to see their output values</li>
+            </ul>
+        
+            </p>
+
         </section>
 
         <section class="main-section" id="Variables">
@@ -99,6 +146,9 @@
             <header>
                 <!-- HEADER TEXT -->
                 <h1>References</h1>
+                <ul>
+                    <li>All the documentation in this page is pasted from the <a href="https://docs.godotengine.org/en/stable/index.html" target="_blank">official Godot documentation</a> and <a href="https://gdscript.com/" target="_blank">GDScript Tutorials</a></li>
+                    <li>The answer for the GDScript v. Python comparison came from <a href="https://godotengine.org/qa/37877/is-learning-godot-a-good-way-to-learn-python" target="_blank">Godot Engine - Q&A</a></li>
             </header>
         </section>
 
