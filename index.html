@@ -55,12 +55,12 @@
                 <!-- HEADER TEXT -->
                 <h1>GDScript and Python</h1>
             </header>
-            <p>Superficially, Python and GDScript appear similar. GDScript's syntax is based on Python's after all. For example, they have the same <code class="inline-code">for loop</code> structure:<br>
-            <br>
+            <p>Superficially, Python and GDScript appear similar. GDScript's syntax is based on Python's after all. For example, they have the same <code class="inline-code">for loop</code> structure:
+            
             <code>
                 for x in someArray:<br>
                 &nbsp;&nbsp;print(x)
-            </code><br><br>
+            </code>
             The main difference between the two is that while Python is a general purpose language which can be used for just about any type of project, GDScript is a "domain specific" language for use in a particular development environment (Godot). This means the language is very tightly integrated into Godot and a lot of what you use it for only applies to Godot. You can't really use it without also understanding how the rest of Godot works.</p>
         </section>
 
@@ -73,7 +73,7 @@
 
             We might assign numbers to variables. Then the value may be passed around and changed. If it's important that the value should not be changed then it should be assigned to a constant.
                 
-            Here are some examples of number assignments. Comments start with a # character.<br><br>
+            Here are some examples of number assignments. Comments start with a # character.
             <code>
                 # Integers<br>
                 var a = 1<br>
@@ -88,7 +88,7 @@
                 <br>
                 # Constant<br>
                 const THE_ANSWER = 42<br>
-            </code><br>
+            </code>
             Pre-defined constants include: PI, TAU, INF (infinity)
 
             For an exercise, write code to print numbers to the Output window of the Editor.
@@ -104,7 +104,7 @@
             </ul>
             <br>
             Here is a code template for this to get started:
-            <br><br>
+            
             <code>
                 extends Node2D<br>
 
@@ -127,6 +127,56 @@
             <header>
                 <!-- HEADER TEXT -->
                 <h1>Variables</h1>
+                <p>In all programming languages, variables are used to store values and references. Examples are: the current score value or a reference to an item of inventory.
+
+                It is good practice to give variables descriptive names in lower-case text, and join words with underscores. Here are some examples of variable declarations:
+                
+                <code>
+                    var score = 0 <br>
+                    var remaining_fuel = 99.9 <br>
+                    var paused = false <br>
+                    var player_name = "" <br>
+                    var selected_weapon <br>
+                    var starting_grid_position <br>
+
+                </code>
+
+                Notice how some variables don't have their value set yet, and we can assign different types of values to the variables. Some basic types are as follows:
+
+                <table>                    
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Details</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>int</td>
+                            <td>A 64bit signed number</td>
+                            <td>-12 54 0xAF</td>
+                        </tr>
+                        <tr>
+                            <td>float</td>
+                            <td>Floating point number</td>
+                            <td>1.23 1e6</td>
+                        </tr>
+                        <tr>
+                            <td>bool</td>
+                            <td>True or false</td>
+                            <td>true false</td>
+                        </tr>
+                        <tr>
+                            <td>String</td>
+                            <td>For words and character sequences</td>
+                            <td>"Hello World"</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                </p>
             </header>
         </section>
 

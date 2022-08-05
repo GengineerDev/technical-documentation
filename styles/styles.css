@@ -55,8 +55,19 @@ code:not(.inline-code) {
     display: block;
     background-color: #e3e1dc;
     width: 100%;
-    margin: 1em 0;
+    margin: 2em 0;
     padding: 1em;
+}
+
+th {
+    padding: 0.2em 0.8em 0.2em 0.2em;
+    background-color: #2a2a2b;
+    color: white;
+}
+
+td {
+    padding: 0.5em;
+    background: #e0dcdc;
 }
 
 @media (max-width: 700px) {
