@@ -85,21 +85,25 @@ caption {
 
     body {
         flex-direction: column;
-        margin-right: 0.2em;
+        margin-right: 0;
     }
 
     #navbar {
-        display: flex;
+        position: static;
         height: 30vh;
         flex-direction: column;
         overflow: auto;
-        border-bottom: 1px solid #2a2a2b;
-        background-color: white;
+        border-bottom: 3px solid #2a2a2b;
+      
+    }
+
+    .nav-link {
+        padding:2%;
     }
 
     main {
-        display: flex;
-        flex-direction: column;
+        display: block;
         overflow-x: hidden;
+ 
     }
 }
