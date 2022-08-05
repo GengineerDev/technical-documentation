@@ -46,8 +46,8 @@
                 <h1>Prerequisites</h1>
             </header>
             <p>Godot is a feature-packed game engine. With its thousands of features, there is a lot to learn. To make the most of it, you need good programming foundations. While we try to make the engine accessible, you will benefit a lot from knowing how to think like a programmer first.
-
-                Godot relies on the object-oriented programming paradigm. Being comfortable with concepts such as classes and objects will help you code efficiently in it.</p>
+                <br><br>
+            Godot relies on the object-oriented programming paradigm. Being comfortable with concepts such as classes and objects will help you code efficiently in it.</p>
         </section>
 
         <section class="main-section" id="GDScript_and_Python">
@@ -70,9 +70,9 @@
                 <h1>Numbers</h1>
             </header>
             <p>Numbers are an important type of data in any computer program. GDScript supports integers and floating point values. And both types may be positive or negative.
-
+                <br><br>
             We might assign numbers to variables. Then the value may be passed around and changed. If it's important that the value should not be changed then it should be assigned to a constant.
-                
+            <br><br>
             Here are some examples of number assignments. Comments start with a # character.
             <code>
                 # Integers<br>
@@ -90,9 +90,9 @@
                 const THE_ANSWER = 42<br>
             </code>
             Pre-defined constants include: PI, TAU, INF (infinity)
-
+            <br><br>
             For an exercise, write code to print numbers to the Output window of the Editor.
-                
+            <br><br>
             Ideas to play around with:
 
             <ul>
@@ -127,8 +127,9 @@
             <header>
                 <!-- HEADER TEXT -->
                 <h1>Variables</h1>
+            </header>
                 <p>In all programming languages, variables are used to store values and references. Examples are: the current score value or a reference to an item of inventory.
-
+                    <br><br>
                 It is good practice to give variables descriptive names in lower-case text, and join words with underscores. Here are some examples of variable declarations:
                 
                 <code>
@@ -177,7 +178,31 @@
                 </table>
 
                 </p>
-            </header>
+                <h3>Variants</h3>
+                <p>In our first example, the variables can take any type of value, and the value may be changed later to another type of value. This kind of variable is called a Variant.
+                    <br><br>
+                So it is easy and quick to code our variable declarations in this way.</p>
+                <h3>Typed Variables</h3>
+                <p>There is a way to declare what type of value a variable will accept. This has advantages to reduce bugs, and get help and warnings from the editor as you enter code.
+                    <br><br>
+                There are two ways to declare typed variables as follows:
+                
+                <code>
+                    # Method 1 <br>
+                    var score: int = 0 <br>
+                    var remaining_fuel: float = 99.9 <br>
+                    var paused: bool = false <br>
+                    var player_name: String = "" <br>
+                    <br>
+                    # Method 2 (inferring the type)<br>
+                    var my_int := 8<br>
+                    var size := 32.6<br>
+                    var running := true<br>
+                    var name := ""<br>
+
+                </code>
+                We call this static typing, and when using variants as before, we call that dynamic typing. Both can be used as you like within your program.
+                </p>                
         </section>
 
         <section class="main-section" id="Operators">
@@ -185,6 +210,102 @@
                 <!-- HEADER TEXT -->
                 <h1>Operators</h1>
             </header>
+            <p>These are mostly used in calculations, comparisons, and operations on binary bits.
+                <br><br>
+            They are evaluated in order of importance (precedence).
+            <br><br>
+            For example, in a calculation: times (x) takes precedence over plus (+) so 2 + 3 x 2 equals 8 rather than 10. A good calculator should obey this precedence rule. For an exercise: check it on your smartphone calculator app.
+            <br><br>
+            The following tables list operators with the highest precedence first.</p>
+            <table>
+                <caption>MATHEMATICAL OPERATORS</caption>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-x</td>
+                        <td>Negation</td>
+                    </tr>
+                    <tr>
+                        <td>* / % </td>
+                        <td>Times / Divide / Remainder </td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>Add</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Subtract</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <caption>BOOLEAN OPERATORS</caption>
+                <thead>
+                    <tr>
+                        <th>Operators</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>< == > != >= <= </td>
+                        <td>Comparison operators</td>
+                    </tr>
+                    <tr>
+                        <td>! not</td>
+                        <td>NOT</td>
+                    </tr>
+                    <tr>
+                        <td>&& and</td>
+                        <td>AND</td>
+                    </tr>
+                    <tr>
+                        <td>|| or</td>
+                        <td>OR</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <caption>BITWISE OPERATORS</caption>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>~</td>
+                        <td>NOT (inverts the bits) </td>
+                    </tr>
+                    <tr>
+                        <td><< >></td>
+                        <td>Shift bits of left-side operand left or right by n positions (1 << 2 == 4)</td>
+                    </tr>
+                    <tr>
+                        <td>&</td>
+                        <td>Logical AND of two values</td>
+                    </tr>
+                    <tr>
+                        <td>^</td>
+                        <td>Logical XOR of two values</td>
+                    </tr>
+                    <tr>
+                        <td>|</td>
+                        <td>Logical OR of two values</td>
+                    </tr>
+                    <tr>
+                        <td>&= |=</td>
+                        <td>Assignment shortcuts</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <section class="main-section" id="Functions">
@@ -192,6 +313,33 @@
                 <!-- HEADER TEXT -->
                 <h1>Functions</h1>
             </header>
+            <p>Functions are a way to group together sections of code that perform related actions. They help us to write more readable code and avoid repeating the same code in multiple places.
+                <br><br>
+            A square root function may be familiar. It has an input and returns an output. Functions may have zero or multiple inputs, and optionally return a result.
+            <br><br>
+            Functions always belong to a Class which is a container for related functions. So when you extend a Node in Godot, you are creating a Class containing your functions and variables.
+            <br><br>
+            Your extended class will also inherit the functions and properties of the class that it extends. Properties are member variables that are declared in the top-most scope of the class.</p>
+            <h3>Function Inputs</h3>
+            <p>Inputs to functions are called arguments. There may be no arguments, a list of arguments, type specified arguments, and arguments with default values.</p>
+            <h3>Function Return Values</h3>
+            <p>The return keyword is used to return at any point. This means exiting the function with a value or not (returns a null value) to the point in the program code just after where the function was called from.
+                <br><br>
+            If the return keyword is not used, then the code will run to the end of the function and return a null value.
+            <br><br>
+            The return value doesn't have to be used, just call the function without capturing it's return value. But this may generate a warning in the error window if the value is not null to alert you to a potential bug in your code logic.
+            <br><br>
+            Also, the return type may be specified to add extra bug resistance.
+            <br><br>
+            Here are examples of ways to define functions in a working example script:
+            
+            <code>
+                # This function returns a value<br>
+                func get_sum(a, b):<br>
+                &nbsp;&nbsp;return a + b
+            </code>
+
+            </p>
         </section>
 
         <section class="main-section" id="Conditional Statements">
@@ -199,6 +347,22 @@
                 <!-- HEADER TEXT -->
                 <h1>Conditional Statements</h1>
             </header>
+            <p>Conditional Statements allow us to control the flow of our program execution. If the code statements only executed one after the other until the end of a function, the functionality would be very limited.
+            <br><br>
+            Once upon a time, flow-charts were popular (maybe they still are?) where we could design our program flow with decision nodes to decide which branch to go down. Typically, we would test a condition for true or false and branch accordingly.
+            <br><br>
+            In a game, we are likely to have simple true/false conditions to test or, a more complex state with several possibilities.
+            <br><br>
+            The basic conditional statement uses the if / else / elif syntax. We use indentation to define the levels for how deep into the if structure we are. Here are some GDScript code examples:
+            <code>
+                if n == 6:<br>
+		        &nbsp;&nbsp;print("n is equal to six")<br>
+                elif n < 6:<br>
+                &nbsp;&nbsp;print("n is less than six")<br>
+                else:<br>
+                &nbsp;&nbsp;print("n is greater than six")
+            </code>
+            </p>
         </section>
 
         <section class="main-section" id="Looping">
@@ -206,6 +370,31 @@
                 <!-- HEADER TEXT -->
                 <h1>Looping</h1>
             </header>
+            <p>Looping in GDScript is done with either a for loop or a while loop.</p>
+            <h3>For Loop</h3>
+            <p>The for loop sets an index value from a range of numbers or by iterating over an object such as an array or dictionary.
+            <br><br>
+            The range function let's us define a range of integers. The start number defaults to 0. The limit number is one more than the maximum count because that is traditionally how it is done since index values tend to start from zero rather than one.
+            <br><br>
+            We may also specify a positive or negative step value, the default is 1.
+            <br><br>
+            The statement body of the for loop is indented.
+            <br><br>
+            You can terminate the loop at any time with a break statement. This might be used to break out of a loop that is used to search for an item within a collection or text document.
+            <br><br>
+            To skip to the end of the statement block, we can use a continue statement.
+            <br><br>
+            Here are code examples showing the various ways to implement a for loop:
+            <code>
+                # loop for n = 0 to 7<br>
+                for n in 8:<br>
+                &nbsp;&nbsp;print(n)<br>
+                <br>
+                # Using range<br>
+                for n in range(8):<br>
+                &nbsp;&nbsp;print(n)
+            </code>
+            </p>
         </section>
 
         <section class="main-section" id="Arrays">
@@ -213,6 +402,31 @@
                 <!-- HEADER TEXT -->
                 <h1>Arrays</h1>
             </header>
+            <p>Arrays are used to store lists of various elements, such as numbers or objects. Most times they are one dimensional but may be multi-dimensional for storing data related to grids or 3D space.
+            <br></br>
+            Each element of the array is referenced by an integer index value starting from zero for the first element.
+            <br></br>
+            An array is an object with various available helper functions to work with it such as for appending new values, getting the size of the array, sorting the values, and shuffling the values etc.
+            <br></br>
+            Since it is an object, it is passed into functions by reference, so changes made to its elements within a function call are made directly to the array object whose reference was passed to the function.
+            <br></br>
+            These code examples will help you to understand how to use GDScript Arrays:
+            <code>
+                # Ways to create an array instance<br>
+                var a = Array()<br>
+                var b = []<br>
+                var c = ["a","b","c"]<br>
+                <br>
+                # Add some items to array 'a'<br>
+                a.append("Item 1")<br>
+                a.append("Item 2")<br>
+                <br>
+                # Pass array by reference to a function<br>
+                change(a)<br>
+                # Confirm that changes were made<br>
+                print(a[0])<br> 
+            </code>
+            </p>
         </section>
 
         <section class="main-section" id="Dictionaries">
@@ -220,6 +434,32 @@
                 <!-- HEADER TEXT -->
                 <h1>Dictionaries</h1>
             </header>
+            <p>A GDScript Dictionary is used to store data as key: value pairs. Each key and value may be numbers, strings, or objects. Dictionaries are constructed with curly brackets.
+
+            The data is in no particular order, and we access values using their unique key.
+                
+            The syntax is the same as JSON data format.
+                
+            Another syntax is also supported that makes it slightly easier to manually edit the data.
+                
+            Dictionaries are useful for storing game data.
+                
+            The following code shows how to define dictionaries and how to use the available methods:</p>
+            <code>
+                # Initialize a player dictionary<br>
+                var player = {<br>
+                &nbsp;&nbsp;"name": "Thor",<br>
+                &nbsp;&nbsp;"inventory": ["sword", "shield", "map"],<br>
+                &nbsp;&nbsp;"location": "Castellion",<br>
+                &nbsp;&nbsp;"energy": 67<br>
+                }<br>
+                <br>
+                if game.empty():<br>
+                &nbsp;&nbsp;# Add data to the game dictionary<br>
+                &nbsp;&nbsp;game["player"] = player<br>
+                &nbsp;&nbsp;game["score"] = 0<br>
+                &nbsp;&nbsp;game["dummy"] = null
+            </code>
         </section>
 
         <section class="main-section" id="Classes">
@@ -227,6 +467,13 @@
                 <!-- HEADER TEXT -->
                 <h1>Classes</h1>
             </header>
+            <p>Classes combine data and functions. In the Godot API (Application Programming Interface) there are many pre-defined classes. These classes are documented in the API section of the official documentation.
+
+            When we want to use a class we usually create a new instance of it. This new instance of the class is an object with a unique reference. For example, the Nodes of a scene in Godot are instances of classes.
+                
+            We create a new scene by extending an existing class such as Node2D. That’s why the first line of code says what class is being extended.
+            <code>extends Node2D</code>
+            </p>
         </section>
 
         <section class="main-section" id="References">
